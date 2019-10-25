@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio player HTML5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/AudioPlayer.css">
+    <style>
+
+    #player{
+        position: relative;
+        max-width: 100%;
+        height: 500px;
+        /* background-color: teal; */
+        border: solid 1px rgb(43, 42, 42);   
+    }
+
+    /* #bruno{
+        position: relative;
+        max-width: 100%;
+        height: 800px;
+        border: solid 1px rgb(43, 42, 42);   
+    } */
+
+    img {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 150px; /* Set a small width */
+}
+
+/* Add a hover effect (blue shadow) */
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.text{
+  text-align: center;
+  font-size: 24px;
+  color: aliceblue;
+}
+
+</style>
+  </head>
+
+  <body>
+
+     
+      <!-- Audio player container-->
+     <div id='player'>
+
+       <p class="text">PLEASE SCROLL DOWN  FOR TO PLAY MUSIC</p>
+      <!-- <a target="_blank" href="resources/img/Bruno.jpg"></a> -->
+        <!-- <img src="resources/img/Bruno.jpg" alt="Forest"/>  -->
+     </div>
+
+     <!-- <div id="bruno">
+
+     </div> -->
+  
+
+    <!-- Audio player js begin-->
+    <script src="js/AudioPlayer.js"></script>
+
+    <script>
+        // test image for web notifications
+        var iconImage = null;
+        
+
+        AP.init({
+            container:'#player',//a string containing one CSS selector
+            volume   : 0.10,
+            autoPlay : true,
+            notification: false,
+            playList: [
+                {'icon': iconImage, 'title': 'Try Everything', 'file': 'mp3/try-everything.mp3'},
+                {'icon': iconImage, 'title': 'Let It Go', 'file': 'mp3/let-it-go.mp3'},
+                {'icon': iconImage, 'title': 'Let You Go', 'file': 'mp3/02.Let You Go.mp3'},
+                // {'icon': iconImage, 'title': 'My Way', 'file': 'mp3/02.My Way.mp3'},
+                // {'icon': iconImage, 'title': 'Blame Game', 'file': 'mp3/03.Blame Game.mp3'},
+                // {'icon': iconImage, 'title': 'Me And My Suitcase', 'file': 'mp3/03.Me and My Suitcase.mp3'},
+                // {'icon': iconImage, 'title': 'Must Be', 'file': 'mp3/04.Must Be.mp3'},
+                // {'icon': iconImage, 'title': 'Never Happen', 'file': 'mp3/04.Never Happen.mp3'},
+                // {'icon': iconImage, 'title': 'I', 'file': 'mp3/05.I.mp3'},
+                // {'icon': iconImage, 'title': 'Out The City', 'file': 'mp3/05.Out The City.mp3'},
+                // {'icon': iconImage, 'title': 'Better Off', 'file': 'mp3/06.Better Off.mp3'},
+                // {'icon': iconImage, 'title': 'Turn Me Up', 'file': 'mp3/06.Turn Me Up.mp3'},
+                // {'icon': iconImage, 'title': 'Tranquility', 'file': 'mp3/07.Tranquility.mp3'},
+                // {'icon': iconImage, 'title': 'Song About Her', 'file': 'mp3/08.Song About Her.mp3'},
+                // {'icon': iconImage, 'title': 'Outro', 'file': 'mp3/09.Outro.mp3'},
+                // {'icon': iconImage, 'title': 'Thats what i like', 'file': 'mp3/Bruno_Mars-That_s_What_I_Like.mp3'}
+       
+          ]
+        });
+        
+    </script>
+    <!-- Audio player js end-->
+
+  </body>
+</html>
